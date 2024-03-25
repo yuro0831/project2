@@ -58,5 +58,5 @@ gem 'dotenv-rails'
 gem 'pg', '~> 1.5'
 gem "dockerfile-rails", ">= 1.5", :group => :development
 group :production do
-    gem "pg", "~> 1.4"
+  gem "pg", "~> 1.4"
 end
