@@ -1096,7 +1096,7 @@
 
 "@rails/webpacker@5.4.3":
   version "5.4.3"
-  resolved "https://registry.yarnpkg.com/@rails/webpacker/-/webpacker-5.4.3.tgz#cfe2d8faffe7db5001bad50a1534408b4f2efb2f"
+  resolved "https://registry.npmjs.org/@rails/webpacker/-/webpacker-5.4.3.tgz"
   integrity sha512-tEM8tpUtfx6FxKwcuQ9+v6pzgqM5LeAdhT6IJ4Te3BPKFO1xrGrXugqeRuZ+gE8ASDZRTOK6yuQkapOpuX5JdA==
   dependencies:
     "@babel/core" "^7.15.0"
@@ -3227,9 +3227,9 @@ fsevents@^1.2.7:
     nan "^2.12.1"
 
 fsevents@~2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
-  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
+  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.1:
   version "1.1.1"
@@ -4558,9 +4558,9 @@ multicast-dns@^6.0.1:
     thunky "^1.0.2"
 
 nan@^2.12.1:
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.17.0.tgz#c0150a2368a182f033e9aa5195ec76ea41a199cb"
-  integrity sha512-2ZTgtl0nJsO0KQCjEpxcIr5D+Yv90plTitZt9JBfQvVJDS5seMl3FOvsh3+9CoYWXf/1l5OaZzzF6nDm4cagaQ==
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.19.0.tgz#bb58122ad55a6c5bc973303908d5b16cfdd5a8c0"
+  integrity sha512-nO1xXxfh/RWNxfd/XPfbIfFk5vgLsAxUR9y5O0cHMJu/AW9U95JLXqthYHjEp+8gQ5p96K9jUp8nbVOxCdRbtw==
 
 nanomatch@^1.2.9:
   version "1.2.13"
