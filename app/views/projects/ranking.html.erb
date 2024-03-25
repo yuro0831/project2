@@ -1,0 +1,29 @@
+<div class="good">  
+  <h1>いいねランキング</h1>
+  <div class="bad">  
+      <% @project.each do |t| %>
+        <div class="ranking">
+          紹介方法:<%= t.about %><br>
+          成功・失敗:<%= t.successfailure %><br>
+          ジャンル:<%= t.genre %><br>
+          学んだこと:<%= t.lesson %><br>
+          
+          <% if user_signed_in? %>
+          <% if current_user.already_liked?(t) %>
+              <%= button_to project_like_path(id: t.id, project_id: t.id), method: :delete do %>
+                <i class="fas fa-heart"></i><%= t.likes.count %>
+              <% end %>
+          <% else %>
+              <%= button_to project_likes_path(id: t.id, project_id: t.id), method: :post do %>
+                <i class="far fa-heart"></i><%= t.likes.count %>
+              <% end %>
+          <% end %>
+      <% else %>
+      <i class="far fa-heart"></i><%= t.likes.count %>
+      <% end %>
+          <%= link_to "詳細へ", project_path(t.id) %>
+
+          </div> 
+      <% end %>
+  </div>    
+</div>     

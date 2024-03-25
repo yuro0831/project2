@@ -1,0 +1,30 @@
+<div class="yuuro">
+<div class="search">
+ジャンル検索
+</div>
+<%= form_tag projects_search_path, method: :get, class: 'boards__searchForm' do %>
+    <%= select_tag :tag_id,
+                   options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+                   {
+                     prompt: 'ジャンルを絞る',
+                     onchange: 'submit(this.form);'
+                   }
+    %>
+  <% end %>
+  
+  
+ 
+
+<% @project.each do |t| %>
+    <div class="tweet">
+    <% t.tags.each do |tag| %>
+      ジャンル:<%= t.genre %> <%= tag.name %>
+      <%= link_to "詳細へ", project_path(t.id) %>
+      <br>
+  <% end %>  
+      
+
+      </div> 
+      
+  <% end %>
+</div>

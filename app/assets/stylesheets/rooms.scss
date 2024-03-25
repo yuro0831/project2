@@ -1,0 +1,184 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.dmapuri_area {
+    padding: 45px 0px;
+    background-color: rgb(56, 56, 203);
+}
+    .dmapuri {
+        width: 800px;
+        height: 100%;
+        background-size: cover;
+        margin: auto;
+        padding-bottom: 20px;
+        
+    }
+        .title_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0px;
+            width: 800px;
+            height: 50px;
+            background-color: rgba(91, 226, 226, 0);
+            background-color: rgb(82, 81, 81);
+        }
+            .title a {
+                    position: absolute;
+                    top: 145px;
+                    left: 270px;
+                }
+               title h1 {
+                    width: 800px;
+                    height: 50px;
+                    background-color: rgba(91, 226, 226, 0);
+                    font-size: 40px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+            
+        
+    .massage_area {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            height: 100%;
+            margin: auto;
+    }
+        .massage {
+                width: 650px;
+                height: 100%;
+                font-size: 18px;
+                line-height: 30px;
+                text-align: center;
+                background-color: rgb(82, 81, 81);
+        }
+            .massage1 {
+                    text-align: start;
+                    background-color: #ffff;
+                    margin-right: 0;
+                    margin-left: auto;
+                    width: fit-content;
+                    height: auto;
+                    line-height: 45px;
+                    border-radius: 15px 0px 15px 15px;
+                    margin-bottom: 10px;
+            }
+               .massage1 strong {
+                        padding: 0px 20px;
+                    }
+                
+            .hojo {
+                    text-align: left;
+            }
+            .hojo a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                
+            .massage2 {
+                    text-align: start;
+                    background-color: white;
+                    margin-left: 0;
+                    margin-right: auto;
+                    width: fit-content;
+                    height: auto;
+                    line-height: 45px;
+                    border-radius: 0px 15px 15px 15px;
+                    margin-bottom: 10px;
+                        }
+               .massage2 strong {
+                        padding: 0px 20px;
+                        }   
+                
+            
+        
+        .post_area1 {
+            margin: auto;
+            margin-top: 20px;
+            width: 600px;
+            height: 50px;
+            padding: 10px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(56, 56, 203);
+        }
+            .field_input {
+                width: 500px;
+                height: 40px;
+                background-color: white;
+                font-size: 25px;
+                border-radius: 20px;
+                
+            }
+           
+               .pst_button button {
+                    border: none;
+                    padding-left: 10px;
+                }
+            
+    
+    
+
+.back_container{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    padding-left: 20px;
+    
+}
+    .btn03{
+        /*影の基点とするためrelativeを指定*/
+        position: relative;
+        /*ボタンの形状*/
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        background: transparent;
+        border-radius: 25px;
+        border: solid 1px #333;
+        outline: none;
+        /*アニメーションの指定*/
+        transition: all 0.2s ease;
+        }
+        /*hoverをした後のボタンの形状*/
+        .btn03:hover{
+        border-color:transparent;
+        }
+        /*ボタンの中のテキスト*/
+        .btn03 span {
+        position: relative;
+        z-index: 2;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+        /*テキストの形状*/
+        display: block;
+        padding: 10px 30px;
+        background:#fff;
+        border-radius: 25px;
+        color: #333;
+        /*アニメーションの指定*/
+        transition: all 0.3s ease;
+        }
+        /*== 右下に押し込まれる（立体が平面に） */
+        /*影の設定*/
+        .pushright:before {
+        content: "";
+        /*絶対配置で影の位置を決める*/
+        position: absolute;
+        z-index: -1;
+        top: 4px;
+        left: 4px;
+        /*影の形状*/
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        background-color: #333;
+        }
+        /*hoverの際にX・Y軸に4pxずらす*/
+        .pushright:hover span {
+        background-color: rgb(82, 81, 81);
+        color: #fff;
+        transform: translate(4px, 4px);
+        }

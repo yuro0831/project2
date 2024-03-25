@@ -1,0 +1,39 @@
+<div class="new-index">
+<h1>新規投稿ページ</h1>
+<%= form_for @project do |f| %>
+
+ 
+    <div class="field">
+      <%= f.label :紹介方法 %>
+      <%= f.text_field :about, :size => 30 %>
+    </div>
+
+  
+    <div class="field">
+      <%= f.label :成功・失敗  %>
+      <%= f.select :successfailure, 
+      [["成功", "成功"], 
+      ["失敗", "失敗"]], include_blank: "選択して下さい" %>
+    </div>
+
+
+    
+    <h5>ジャンル選択</h5>
+    <div class='form-group'>
+      <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "ジャンルを選択してください"  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :学んだこと %>
+      <%= f.text_field :lesson, :size => 30 %>
+    </div>
+    <div class="field">
+    <%= f.label :pdf %>
+    <%= f.file_field :pdf %>
+  </div>
+
+  <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", projects_path %>
+</div>

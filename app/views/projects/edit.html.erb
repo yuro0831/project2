@@ -1,0 +1,27 @@
+<div class="edit">
+<%= form_for @project do |f| %>
+    <p class="tata"><%= f.label :紹介方法 %></p>
+    <%= f.text_field :about, :size => 140 %></br>
+    <p class="tata"><%= f.label :成功・失敗 %></p>
+    <%= f.select :successfailure, 
+      [["成功", "成功"], 
+      ["失敗", "失敗"]], include_blank: "選択して下さい" %> </br>
+
+      <p class="tata"><%= f.label :ジャンル %></p>
+      <%= f.select :successfailure, 
+      [["新企画の提案", "新企画の提案"], 
+      ["新商品・サービスの紹介", "新商品・サービスの紹介"], 
+      ["コンペでのプレゼン", "コンペでのプレゼン"], 
+      ["課題検討会議", "課題検討会議"], 
+      ["上司への報告", "上司への報告"], 
+      ["会社説明会", "会社説明会"], 
+      ["入社面接", "入社面接"], 
+      ["授業", "授業"],
+      ["部活紹介","部活紹介"], 
+       ["その他", "その他"]], include_blank: "選択して下さい" %> </br>
+
+       <p class="tata"><%= f.label :学んだこと %></p>
+    <%= f.text_field :lesson, :size => 140 %> </br> 
+    <%= f.submit "編集する" %>
+  <% end %>
+</div>  

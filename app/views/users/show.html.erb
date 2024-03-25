@@ -1,0 +1,50 @@
+<div class="mypage">
+ <div class="box">
+    <h1>ユーザーマイページ</h1>
+
+        <p>メールアドレス : <%= @user.email %></p>
+        <p>プロフィール : <%= @user.profile %></p>
+        名前：<%= @user.name %><br>
+        <%= image_tag @user.image_url, size: "250x200" if @user.image? %>
+        
+
+
+    <% if current_user.id == @user.id %>
+    <p><%= link_to "マイページの編集", edit_user_registration_path %></p>
+    <% end %>
+
+    <h2>ユーザーの投稿一覧</h2>
+
+    <% @user.projects.each do |t| %>
+        <%= image_tag t.user.image_url, size: "250x200" if t.user.image? %><br>
+        紹介方法:<%= t.about %><br>
+        成功・失敗:<%= t.successfailure %><br>
+        <% t.tags.each do |tag| %>
+        ジャンル:<%= t.genre %><%= tag.name %><br>
+        <% end %>
+        学んだこと:<%= t.lesson %><br>
+        
+        <%= link_to "詳細へ", project_path(t.id) %>
+    <% end %>
+
+
+    <div class="user-inn">
+
+        <% if @user.id == current_user.id %>
+            <%= @msg %>
+        <% else %>
+            <% if @isRoom == true %>
+                <p><%= link_to 'DMへ', room_path(@roomId) %></p>
+            <% else %>
+                <%= form_for @room do |f| %>
+                    <%= fields_for @entry do |e|%>
+                        <% e.hidden_field :user_id, value: @user.id %>
+                    <% end %>
+                <%= f.submit "DMを開始する"%>
+                <% end %>
+            <% end %>
+        <% end %>
+    </div>
+    <%= link_to "ユーザー一覧表示", users_path %>
+ </div>
+</div>

@@ -1,0 +1,17 @@
+.good{
+    height: 755px;
+    width: 1351px;
+    background-image: linear-gradient(90deg, rgba(52, 59, 202, 1), rgba(162, 120, 182, 1) 50%, rgba(243, 196, 170, 1));
+    color: #ffff;
+}
+
+.bad{
+    position:absolute;
+			top: 20%;
+			left:10%;
+}
+
+.good h1{
+    padding-top:1%;
+    padding-left:3%;
+}

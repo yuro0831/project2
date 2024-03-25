@@ -1,0 +1,24 @@
+<div class="user-box">
+
+<div class="user">
+<h1>ユーザー一覧ページ/他ユーザーへのDM</h1>
+
+<div class="list">
+    <% if user_signed_in? %>   
+
+        <% number = 1%>
+        <div class="flex">
+            <% @users.each do |u| %>
+            <ul class="list_test-wrap">
+                <ul class="list_test"> <%= link_to u.name, user_path(u.id) %>さん</ul>
+            </ul>
+            <% number += 1 %>
+            <% end %>
+            
+        </div>
+    <% else %>
+    <p>ログインしてね</p>
+    <% end %>
+</div>
+</div>
+</div>

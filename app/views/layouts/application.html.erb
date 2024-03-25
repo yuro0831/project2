@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projectsyoukai</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/~~~~~~"  crossorigin="anonymous"></script> 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <header>
+   <h1><li><%= link_to "プロジェクト紹介", projects_path %></li></h1>
+
+   <div class="header-list">
+    <ul>
+      <li><%= link_to "いいねランキング", projects_ranking_path %></li>
+      <li><%= link_to "新規投稿へ", new_project_path %></li>
+     <% if user_signed_in? %>
+     <li><%= link_to "マイページ", user_path(current_user.id)%></li>
+     <li><%= link_to "検索", projects_search_path %></li>
+      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+     <% else %>
+      <li><%= link_to "新規登録", new_user_registration_path %></li>
+      <li><%= link_to "ログイン", new_user_session_path %></li>
+      <li><%= link_to "検索", projects_search_path %></li>
+     <% end %>
+    </ul>
+   </div>
+  </header>
+  <main>
+   <%= yield %>
+  </main>
+ </body>
+  
+</html>
